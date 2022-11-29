@@ -193,6 +193,27 @@ cod_obra int not null,
 func_id_funcionario int not null,
 FOREIGN KEY(func_id_funcionario) REFERENCES funcionario (id_funcionario)
 );
+insert INTO `manutencao` (data_termi_mnt, custo_mnt, data_ini_mnt, desc_mnt, cod_obra, func_id_funcionario) VALUES 
+('2022-10-30',30.30,'2022-01-02','portas',001,001),
+('2022-11-20',20.30,'2022-02-02','quadros',002,002),
+('2022-12-30',122.30,'2022-09-02','dispensers',003,003),
+('2022-12-31',34.45,'2021-01-02','galerias',004,004),
+('2022-10-24',30.50,'2022-01-03','aluminio',005,005),
+('2022-05-20',30.30,'2022-01-06','portas',006,006),
+('2022-12-30'930.30,'2022-11-12','ceramicas',007,007),
+('2022-12-30',30.30,'2022-01-02','retratos',008,008),
+('2021-10-10',50.30,'2021-01-08','esposições',0099,009),
+('2021-10-30',60.30,'2021-01-02','portas',011,011),
+('2022-10-12',310.20,'2022-02-02','janelas',012,012),
+('2022-11-10',1000.30,'2022-11-02','cortinas',013,013),
+('2022-10-30',30.20,'2022-03-22','metais',014,014),
+('2022-07-30',390.30,'2021-01-02','estantes',015,015),
+('2022-08-30',50.50,'2022-01-05','luzes',016,016),
+('2022-11-30',30.20,'2022-11-02','pisos',017,017),
+('2022-01-30',30.30,'2022-01-02','holofotes',018,018),
+('2022-10-30',36.30,'2022-01-02','portas',019,019),
+('2022-10-30',30.30,'2022-02-02','retratos',021,021),
+('2022-101-30',30.30,'2021-03-02','portas',020,020);
 
 CREATE TABLE obra (
 cod_obra int auto_increment PRIMARY KEY,
@@ -210,6 +231,27 @@ CREATE TABLE tipo_obra (
 cod_tipo_obra int auto_increment PRIMARY KEY,
 desc_tipo_obra varchar(80) not null
 );
+insert Into `tipo_obra` (desc_tipo_obra) VALUES 
+('Iracema, 1909 – Antônio Parreirases'),
+('Pobre Pescador, 1896 – Paul Gauguin.'),
+('Nu feminino Sentado - Abel-Dominique Boyé'),
+('Mona Lisa, ou La Gioconda'),
+('A escultura Vitória da Samotrácia foi esculpida em mármore branco.'),
+('A escultura é uma das mais significativas do período helenístico.'),
+('Seu autor foi um escultor grego.'),
+('A Liberdade Guiando o Povo.'),
+('A obra retrata a revolta ocorrida na França.'),
+('A escultura da Vênus de Milo.'),
+('A estátua foi produzida em dois blocos de mármore.'),
+('O quadro Bodas de Caná é o maior do Museu do Louvre.'),
+('O quadro retrata cenas bíblicas e cenas do cotidiano da Veneza do século XVI.'),
+('Escultura em mármore realizada pelo italiano Antônio Canova.'),
+('A escultura transmite simplicidade e beleza.'),
+('Essa impressionante escultura em mármore foi esculpida por Michelangelo.'),
+('A escultura expressa os detalhes anatômicos com a máxima perfeição.'),
+('A Esfinge de Tanis foi descoberta em 1825 na cidade de Tanis.'),
+('O rei Hamurabi criou esse código na Mesopotâmia.'),
+('São 282 artigos de direito.');
 
 CREATE TABLE manu_mat (
 Campo_1 int not null,
