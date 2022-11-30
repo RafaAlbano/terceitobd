@@ -166,22 +166,24 @@ insert INTO `funcionario` ( nome_funcionario, salario_funcionario,cpf_funcionari
 ("Lara",2820.20,"111.333.444-34",002),
 ("Lina",3280.20,"181.222.444-53",001),
 ("Ana",4270.20,"111.292.499-34",001),
-("Maria",5280.20,"881.222.484-38",001),
-("bianca",6270.20,"111.222.444-34",001),
-("Sara",720.20,"111.222.444-34",001),
-("Sarah",820.20,"111.222.444-34",001),
-("luli",920.20,"111.222.444-34",001),
-("Bianca",9280.20,"111.222.444-34",001),
-("Larisa",1420.20,"111.222.444-34",001),
-("Larissa",1290.20,"111.222.444-34",001),
-("Lana",1280.20,"111.222.444-34",001),
-("Luana",1980.20,"111.222.444-34",001),
-("Luana",1234.20,"111.222.444-34",001),
-("Luana",1240.20,"111.222.444-34",001),
-("Luana",1230.20,"111.222.444-34",001),
-("Luana",1260.20,"111.222.444-34",001),
-("Luana",1250.20,"111.222.444-34",001),
-("Luana",1420.20,"111.222.444-34",001);
+("Maria",5280.20,"881.222.484-38",003),
+("bianca",6270.20,"111.292.444-94",002),
+("Sara",720.20,"151.225.454-34",001),
+("Sarah",820.20,"111.222.443-34",002),
+("luli",920.20,"111.282.444-34",002),
+("Bianca",9280.20,"111.485.444-34",001),
+("Larisa",1420.20,"278.222.484-34",001),
+("Larissa",1290.20,"111.222.276-34",003),
+("Lana",1280.20,"111.202.444-90",002),
+("Lua",1980.20,"131.232.444-34",001),
+("Lana",1234.20,"911.222.146-34",001),
+("bibi",1240.20,"111.152.444-34",003),
+("Leo",1230.20,"981.222.444-34",002),
+("Luan",1260.20,"111.202.874-11",001),
+("Gigi",1250.20,"111.872.444-34",001),
+("Vinicius",1420.20,"111.098.444-34",001);
+
+delete from funcionario;
 
 CREATE TABLE manutencao (
 mnt_obra int auto_increment PRIMARY KEY,
@@ -194,26 +196,31 @@ func_id_funcionario int not null,
 FOREIGN KEY(func_id_funcionario) REFERENCES funcionario (id_funcionario)
 );
 insert INTO `manutencao` (data_termi_mnt, custo_mnt, data_ini_mnt, desc_mnt, cod_obra, func_id_funcionario) VALUES 
-('2022-10-30',30.30,'2022-01-02','portas',001,001),
-('2022-11-20',20.30,'2022-02-02','quadros',002,002),
-('2022-12-30',122.30,'2022-09-02','dispensers',003,003),
-('2022-12-31',34.45,'2021-01-02','galerias',004,004),
-('2022-10-24',30.50,'2022-01-03','aluminio',005,005),
-('2022-05-20',30.30,'2022-01-06','portas',006,006),
-('2022-12-30'930.30,'2022-11-12','ceramicas',007,007),
-('2022-12-30',30.30,'2022-01-02','retratos',008,008),
-('2021-10-10',50.30,'2021-01-08','esposições',0099,009),
-('2021-10-30',60.30,'2021-01-02','portas',011,011),
-('2022-10-12',310.20,'2022-02-02','janelas',012,012),
-('2022-11-10',1000.30,'2022-11-02','cortinas',013,013),
-('2022-10-30',30.20,'2022-03-22','metais',014,014),
-('2022-07-30',390.30,'2021-01-02','estantes',015,015),
-('2022-08-30',50.50,'2022-01-05','luzes',016,016),
-('2022-11-30',30.20,'2022-11-02','pisos',017,017),
-('2022-01-30',30.30,'2022-01-02','holofotes',018,018),
-('2022-10-30',36.30,'2022-01-02','portas',019,019),
-('2022-10-30',30.30,'2022-02-02','retratos',021,021),
-('2022-101-30',30.30,'2021-03-02','portas',020,020);
+('2022-10-30',30.30,'2022-01-02','portas',65,001),
+('2022-11-20',20.30,'2022-02-02','quadros',66,002),
+('2022-12-30',122.30,'2022-09-02','dispensers',67,003),
+('2022-12-31',34.45,'2021-01-02','galerias',68,001),
+('2022-10-24',30.50,'2022-01-03','aluminio',69,002),
+('2022-05-20',30.30,'2022-01-06','portas',70,003),
+('2022-12-30',930.30,'2022-11-12','ceramicas',71,001),
+('2022-12-30',30.30,'2022-01-02','retratos',72,002),
+('2021-10-10',50.30,'2021-01-08','esposições',73,003),
+('2021-10-30',60.30,'2021-01-02','portas',74,001),
+('2022-10-12',310.20,'2022-02-02','janelas',75,002),
+('2022-11-10',1000.30,'2022-11-02','cortinas',76,003),
+('2022-10-30',30.20,'2022-03-22','metais',77,001),
+('2022-07-30',390.30,'2021-01-02','estantes',78,002),
+('2022-08-30',50.50,'2022-01-05','luzes',79,003),
+('2022-11-30',30.20,'2022-11-02','pisos',80,001),
+('2022-01-30',30.30,'2022-01-02','holofotes',81,002),
+('2022-10-30',36.30,'2022-01-02','portas',82,001),
+('2022-10-30',30.30,'2022-02-02','retratos',83,002),
+('2022-10-30',30.30,'2021-03-02','portas',84,001);
+
+delete from manutencao;
+
+select * from manutencao;
+select * from funcionario;
 
 CREATE TABLE obra (
 cod_obra int auto_increment PRIMARY KEY,
@@ -226,12 +233,36 @@ cod_autor int not null,
 cod_tipo_obra int not null,
 FOREIGN KEY(cod_autor) REFERENCES autor (cod_autor)
 );
+Insert INTO `obra` ( ano_obra, titu_obra, peso_obra, material_obra, desc_estilo_obra,cod_autor,cod_tipo_obra ) VALUES 
+('2019','Mona Lisa',10,'madeira','desc1',20,001),
+('2020','Guernica',20,'pincel','desc2',10,002),
+('2020','O beijo',10,'argila','desc3',20,003),
+('2020','O grito',20,'escada','desc4',10,004),
+('2019','N° 5',10,'caneta','desc5',20,005),
+('2020','As meninas',30,'penas','desc6',10,006),
+('2015','Os Comedores de batata',10,'vidro','desc7',20,007),
+('2017','A persistência de memórias',20,'pérolas','desc8',10,008),
+('2010','Impressão, sol nascente',40,'tecidos','desc9',20,009),
+('2009','Os Fuzilamentos de Três de Maio',10,'obras','desc10',10,010),
+('2005','A moça com brinco de pérolas',30,'quadros','desc11',12,011),
+('2019','O almoço dos barqueiros',40,'folhas','desc12',13,012),
+('2019','Hospital de henry ford',20,'ferro','desc13',12,013),
+('2022','os retirantes',70,'arame','desc14',17,014),
+('2012','Abaporu',17,'tinta azul','desc15',10,015),
+('2009','A ronda noturna',10,'argamassa','desc16',10,016),
+('2003','A noite estrelada',20,'gesso','desc17',11,017),
+('2019','Nu descendo uma escada',60,'tinta branca','desc18',10,018),
+('2002','O trabalho de uma imagem',10,'gliter','des19',17,019),
+('2016','As duas fridas',50,'porpurina','desc20',10,020);
+
+delete from obra;
+
 
 CREATE TABLE tipo_obra (
 cod_tipo_obra int auto_increment PRIMARY KEY,
-desc_tipo_obra varchar(80) not null
+desc_tipo_obra varchar(480) not null
 );
-insert Into `tipo_obra` (desc_tipo_obra) VALUES 
+insert INTO `tipo_obra` (desc_tipo_obra) VALUES 
 ('Iracema, 1909 – Antônio Parreirases'),
 ('Pobre Pescador, 1896 – Paul Gauguin.'),
 ('Nu feminino Sentado - Abel-Dominique Boyé'),
@@ -260,6 +291,29 @@ qtd_mat_mnt varchar(15) not null,
 FOREIGN KEY(Campo_1) REFERENCES manutencao (mnt_obra),
 FOREIGN KEY(Campo_2) REFERENCES materia_prima (cod_mat_prima)
 );
+Insert INTO `manu_mat` (Campo_1, Campo_2, qtd_mat_mnt) VALUES
+(1,2,211),
+(1,2,200),
+(1,2,300),
+(1,2,350),
+(1,2,220),
+(1,2,300),
+(1,2,200),
+(1,2,430),
+(1,2,450),
+(1,2,222),
+(1,2,400),
+(1,2,500),
+(1,2,300),
+(1,2,200),
+(1,2,250),
+(1,2,211),
+(1,2,271),
+(1,2,200),
+(1,2,400),
+(1,2,500);
+
+explain table manu_mat;
 
 ALTER TABLE salao_obra ADD FOREIGN KEY(obra_cod_obra) REFERENCES obra (cod_obra);
 ALTER TABLE atividade ADD FOREIGN KEY(ob_cod_obra) REFERENCES obra (cod_obra);
